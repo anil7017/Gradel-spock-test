@@ -1,0 +1,14 @@
+spring:
+  cloud:
+    stream:
+      function:
+        definition: accumulate;receive;send
+      bindings:
+        send-out-0:
+          destination: anil_ints
+        receive-in-0:
+          destination: anil_total
+        accumulate-in-0:
+          destination: anil_ints
+        accumulate-out-0:
+          destination: anil_total
